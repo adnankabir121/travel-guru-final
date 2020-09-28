@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.heading{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+.star{
+    width: 8%;
+}
+span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+.login-form{
+    padding: 100px 0px 100px 0px;
+}
+.login-form .field{
+    display: block;
+    padding: 7px 0;
+    padding-right: 100px;
+    padding-left: 7px;
+    margin-bottom: 20px;
+}
+form{
+    padding: 38px 54px;
+    border: 1px solid #ababab;
+    border-radius: 3px;
+}
+form h2{
+    margin-bottom: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+::placeholder{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.other-login-systems{
+    margin-top: 30px;
+}
+.other-login-systems button{
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #C7C7C7;
+    border-radius: 30px;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    background: white;
+    transition: .3s;
+}
+.login-label{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500; 
+}
+.new-account{
+    margin: 20px 0;
+}
+.new-account input{
+    margin-right: 10px;
+}
+.google:hover{
+    background:#EA4335;
+    color: white;
+}
+.facebook:hover{
+    background: #166FE5;
+    color: white;
+}
+.or{
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.or::before{
+    content: "";
+    width: 40%;
+    height: 1px;
+    background:rgb(155, 155, 155);;
+    top: 50%;
+    left: 0;
+    position: absolute;
+}
+.or::after{
+    content: "";
+    width: 40%;
+    height: 1px;
+    background:rgb(155, 155, 155);
+    top: 50%;
+    right: 0;
+    position: absolute;
+}
+.login{
+    background-color: #F9A51A;
+    padding: 8px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    border: none;
+    transition: .3s;
+}
+.create-account{
+    background-color: #F9A51A;
+    padding: 8px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    border: none;
+    transition: .3s;
+}
+.create-account:hover{
+    background-color: #e2712f;
+}
+.login:hover{
+    background-color: #e2712f;
+}

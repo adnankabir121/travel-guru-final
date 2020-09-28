@@ -1,26 +1,58 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext, useState } from 'react';
+import HomePage from './Components/HomePage/HomePage';
+import Signup from './Components/Signup/Signup'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import NoMatch from './Components/NoMatch';
+import BookingInfo from './Components/BookingInfo/BookingInfo';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute'
 
-function App() {
+
+export const UserContext = createContext();
+const App = () => {
+  const [loggedInUser, setLoggedInUser] = useState({});
+  const userStyle={
+    border:'1px solid grey',
+    padding:'20px'
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+        <div className="container">
+          <div className="user mb-3" style={userStyle}>
+            <p>Name : {loggedInUser.name}</p>
+            <p>Email : {loggedInUser.email}</p>
+          </div>
+
+        </div>
+
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route path="/home">
+              <HomePage />
+            </Route>
+            <Route path="/sign-up">
+              <Signup />
+            </Route>
+
+            <PrivateRoute path="/booking-info">
+              <BookingInfo />
+            </PrivateRoute>
+            <Route path="*">
+              <NoMatch />
+            </Route>
+          </Switch>
+        </Router>
+      </UserContext.Provider>
     </div>
   );
-}
+};
 
 export default App;

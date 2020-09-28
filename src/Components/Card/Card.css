@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+img{
+    width: 100%;
+}
+.single-card{
+    position: relative;
+    
+}
+.card-text{
+    position: absolute;
+    bottom: 60px;
+    left: 30px;
+}
+.card-text h1{
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size:60px;
+}
